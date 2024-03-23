@@ -1,0 +1,41 @@
+.calendar {
+    .dates-wrapper {
+        border-radius: 10px;
+        overflow: hidden;
+        border: solid 1px #e5e7eb;
+    }
+    .date {
+        background: #fff;
+        border: solid 1px #e5e7eb;
+        margin: -1px;
+        min-height: 100px;
+
+        time {
+            color: #374151;
+            font-size: 12px;
+            margin: 10px 0 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .exclude_date {
+        background-color: #f9fafb;
+    }
+
+    .today time {
+        background: #4f46e5;
+        border-radius: 50%;
+        color: #fff;
+    }
+
+    .event-sched {
+        span {
+            color: #374151;
+            font-size: 12px;
+            display: block;
+        }
+    }
+}
