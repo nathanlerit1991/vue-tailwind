@@ -18,10 +18,7 @@ const props_data = defineProps({
 })
 
 //Vite for binding image
-const imgUrl = new URL(
-  `${props_data.image_src}`.replace('@/', '/src/'),
-  import.meta.url,
-).href
+const imgUrl = `${props_data.image_src}`.replace('@/', '/src/')
 </script>
 
 <template>

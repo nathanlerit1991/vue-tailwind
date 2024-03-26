@@ -10,7 +10,6 @@
 </script>
 <template>
     <SectionWrapper>
-        <img src="@/assets/images/naruto/1.jpg"/>
         <ContainerWrapper>
             <Row>
                 <Column v-for="n in 32" additional_class="sm:w-1/4">
