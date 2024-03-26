@@ -17,12 +17,11 @@ const props_data = defineProps({
   },
 })
 
-let imgUrl = props_data.image_src;
-
-// Conditionally replace '@/' with '/src/' only if it's used in a custom component
-if (import.meta.env.MODE !== 'production') {
-  imgUrl = `${props_data.image_src}`.replace('@/', '/src/');
-}
+//Vite for binding image
+const imgUrl = new URL(
+  `../../assets/images/${props_data.image_src}`,
+  import.meta.url,
+).href
 </script>
 
 <template>

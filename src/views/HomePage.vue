@@ -15,7 +15,7 @@
             <Row>
                 <Column v-for="n in 32" additional_class="sm:w-1/4">
                    <Img 
-                    :image_src="`@/assets/images/naruto/${n}.jpg`" 
+                    :image_src="`naruto/${n}.jpg`" 
                     :image_alt="`alt${n}`"
                     image_loading="lazy"
                     />
