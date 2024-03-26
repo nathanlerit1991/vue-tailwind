@@ -30,10 +30,3 @@
     // You might want to save the configuration to localStorage or a server here
   }
   </script>
-
-  <style>
-input {
-    border: solid 1px #000;
-}
-</style>
-  ../../theme.config.js

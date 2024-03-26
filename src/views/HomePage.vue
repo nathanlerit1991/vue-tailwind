@@ -6,13 +6,14 @@
 
     import Img from '@/components/UIElements/Img.vue'
     import Calendar from '@/components/UIElements/Calendar.vue'
+    import Accordion from '@/components/UIElements/Accordion.vue'
 </script>
 <template>
     <SectionWrapper>
         <ContainerWrapper>
             <Row>
                 <Column>
-                    <Calendar />
+                   <Accordion />
                 </Column>
             </Row>
         </ContainerWrapper>

@@ -1,6 +1,6 @@
 {
     "btn-primary": {
-      "color": "pink",
+      "color": "green",
       "background-color": "blue"
     },
     "btn-secondary": {
@@ -8,4 +8,3 @@
         "background-color": "#fff"
     }
 }
-  
