@@ -1,5 +1,5 @@
 <template>
-    <div class="calendar">
+    <div class="g-calendar">
 
         
       <div class="header flex justify-center items-center">

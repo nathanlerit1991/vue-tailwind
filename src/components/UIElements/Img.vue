@@ -1,27 +1,27 @@
 <script setup>
-const props_data = defineProps({
-  image_src: {
-    type: String,
-    default: () => '',
-    required: true,
-  },
-  image_alt: {
-    type: String,
-    default: () => '',
-    required: true,
-  },
-  image_loading: {
-    type: String,
-    default: () => '',
-    required: true,
-  },
-})
+  const props_data = defineProps({
+    image_src: {
+      type: String,
+      default: () => '',
+      required: true,
+    },
+    image_alt: {
+      type: String,
+      default: () => '',
+      required: true,
+    },
+    image_loading: {
+      type: String,
+      default: () => '',
+      required: true,
+    },
+  })
 
-//Vite for binding image
-const imgUrl = new URL(
-  `../../assets/images/${props_data.image_src}`,
-  import.meta.url,
-).href
+  //Vite for binding image
+  const imgUrl = new URL(
+    `../../assets/images/${props_data.image_src}`,
+    import.meta.url,
+  ).href
 </script>
 
 <template>
