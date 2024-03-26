@@ -1,0 +1,11 @@
+{
+    "btn-primary": {
+      "color": "pink",
+      "background-color": "blue"
+    },
+    "btn-secondary": {
+        "color": "blue",
+        "background-color": "#fff"
+    }
+}
+  
