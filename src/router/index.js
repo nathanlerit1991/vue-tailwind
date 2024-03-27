@@ -4,7 +4,7 @@ import HomePage from '../views/HomePage.vue'
 import Theme from '../views/Theme.vue'
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
