@@ -4,7 +4,7 @@ import HomePage from '../views/HomePage.vue'
 import Theme from '../views/Theme.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
