@@ -26,6 +26,9 @@
 
 <template>
   <img
-    :src="imgUrl"
+    :src="props_data.image_loading === 'lazy' ? '@/assets/images/lazy_placeholder.png' : props_data.image_loading"
+    :data-src="props_data.image_loading === 'lazy' ? imgUrl : null"
+    :alt="props_data.image_alt"
+    :loading="props_data.image_loading"
   />
 </template>
