@@ -12,19 +12,6 @@
     <SectionWrapper>
         <ContainerWrapper>
             <Row>
-                <Column>
-                    <Img 
-                        image_src="naruto/1.jpg" 
-                        image_alt="altbanner"
-                        image_loading="eager"
-                    />
-                </Column>
-            </Row>
-        </ContainerWrapper>
-    </SectionWrapper>
-    <SectionWrapper>
-        <ContainerWrapper>
-            <Row>
                 <Column v-for="n in 32" additional_class="sm:w-1/4">
                    <Img 
                     :image_src="`naruto/${n}.jpg`" 
