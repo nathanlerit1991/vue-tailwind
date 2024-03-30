@@ -1,6 +1,6 @@
 <template>
     <div class="g-accordion group" :class="isOpen ? 'group-open' : ''">
-      <div class="flex justify-between items-center cursor-pointer bg-gray-100 p-4 rounded-lg" @click="toggleAccordion">
+      <div class="flex justify-between items-center cursor-pointer bg-gray-100 p-4 rounded-lg tbs-accordion-header-primary" @click="toggleAccordion">
         <slot name="header">
             <h2>What is a SAAS platform?</h2>
             <span class="transition-icon">

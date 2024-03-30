@@ -26,5 +26,19 @@
     "border-color": "#3db2d5",
     "border-width": "1px",
     "border-style": "solid"
+  },
+  "tbs-accordion-header-primary": {
+    "background-color": "red",
+    "color": "#fff",
+    "font-size": "12px",
+    "font-weight": "400",
+    "padding-left": "16px",
+    "padding-top": "8px",
+    "padding-right": "16px",
+    "padding-bottom": "8px",
+    "border-radius": "8px",
+    "border-color": "#3db2d5",
+    "border-width": "1px",
+    "border-style": "solid"
   }
 }
