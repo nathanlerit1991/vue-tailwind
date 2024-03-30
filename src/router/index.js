@@ -27,16 +27,16 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  const authToken = getCookie('authToken');
-  const isAuthenticated = authToken ? true : false;
+// router.beforeEach((to, from, next) => {
+//   const authToken = getCookie('authToken');
+//   const isAuthenticated = authToken ? true : false;
 
-  // These are the pages accessible without authentication
-  if (!isAuthenticated && to.path !== '/login' && to.path !== '/registration') {
-    next('/login');
-  } else {
-    next();
-  }
-});
+//   // These are the pages accessible without authentication
+//   if (!isAuthenticated && to.path !== '/login' && to.path !== '/registration') {
+//     next('/login');
+//   } else {
+//     next();
+//   }
+// });
 
 export default router
