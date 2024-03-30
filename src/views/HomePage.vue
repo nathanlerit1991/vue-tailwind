@@ -8,7 +8,81 @@
     import Calendar from '@/components/UIElements/Calendar.vue'
     import Accordion from '@/components/UIElements/Accordion.vue'
 </script>
+<style lang="scss">
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+#hero {
+    background: #021f2d;
+    position: relative;
+    min-height: 400px;
+
+    .hero-content > div > * {
+        margin: 30px 0;
+    }
+
+    h1 {
+        font-size: 30px;
+        color: #fff;
+        line-height: 35px;
+
+        span {
+            font-size: 85px;
+            line-height: 75px;
+            font-weight: 700;
+            display: block;
+        }
+    }
+    p {
+        font-size: 18px;
+        color: #fff;
+        line-height: 18px * 1.2;
+    }
+    small {
+        color: #fff;
+    }
+
+    img {
+        max-width: 350px;
+        aspect-ratio: 1 / 2;
+    }
+}
+
+#accordion {
+    .g-accordion {
+        margin: 8px 0;
+    }
+}
+</style>
 <template>
+    <SectionWrapper id="hero">
+        <ContainerWrapper>
+            <Row>
+                <Column additional_class="sm:w-8/12 hero-content flex items-center">
+                    <div>
+                        <h1>The Hero <span>Banner</span> Section Title</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu</p>
+                        
+                        <small>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</small>
+
+                        <div>
+                            <button class="tbs-btn-primary">Primary</button>
+                            <button class="tbs-btn-secondary m-5">Secondary</button>
+                        </div>
+                    </div>
+                </Column>
+                <Column additional_class="sm:w-4/12">
+                   <Img 
+                    image_src="solo-leveling.webp" 
+                    image_alt="hero"
+                    image_loading="eager"
+                    ></Img>
+                </Column>
+            </Row>
+        </ContainerWrapper>
+    </SectionWrapper>
     <SectionWrapper>
         <ContainerWrapper>
             <Row>
