@@ -1,16 +1,33 @@
 {
   "background": {
-    "bg-primary-color" : "#fcfcff",
-    "bg-secondary-color" : "#fff"
+    "bg-primary-color" : "#fff",
+    "bg-secondary-color" : "#fcfcff",
+    "btn-primary-color" : "#fff",
+    "btn-secondary-color": "#4c4988"
   },
   "font": {
-    "font-primary-color" : "#fff",
-    "font-secondary-color" : "#000",
+    "font-primary-color" : "#858585",
+    "font-secondary-color" : "#fff",
     "font-tertiary-color" : "#e1e1e1",
     "font-xs" : "11px",
     "font-sm" : "13px",
     "font-md" : "18px",
     "font-lg" : "25px",
-    "font-xl" : "32px"
+    "font-xl" : "32px",
+    "font-xxl" : "45px"
+  },
+  "spaces": {
+    "space-xs" : "3px",
+    "space-sm" : "6px",
+    "space-md" : "16px",
+    "space-lg" : "25px",
+    "space-xl" : "32px"
+  },
+  "border radius": {
+    "border-radius-xs" : "3px",
+    "border-radius-sm" : "6px",
+    "border-radius-md" : "16px",
+    "border-radius-lg" : "25px",
+    "border-radius-xl" : "32px"
   }
 }

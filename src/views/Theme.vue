@@ -24,17 +24,28 @@ const saveConfig = () => {
 <template>
   <SectionWrapper>
     <ContainerWrapper>
-      <Row class="py-5" v-for="(category, categoryName) in temporaryConfigStorage" :key="categoryName">
+      <Row v-for="(category, categoryName) in temporaryConfigStorage" :key="categoryName">
         <Column>
-          <h3 class="uppercase mb-3">{{ categoryName }}</h3>
+          <h3 class="uppercase text-lg font-bold mb-3">{{ categoryName }}</h3>
         </Column>
-        <Column v-for="(colorValue, colorName) in category" :key="colorName" additional_class="sm:w-3/12">
+        <Column v-for="(colorValue, classLabel) in category" :key="classLabel" additional_class="sm:w-3/12">
           <div class="mb-4">
             <div>
-              <label class="block mb-1 font-bold">{{ colorName }}</label>
-              <input v-model="category[colorName]" type="text" class="border border-gray-300 rounded-md px-3 py-2 w-full" />
+              <label class="flex items-center mb-1">
+                {{ classLabel }}
+                <div
+                  class="mx-2"
+                  style="width: 20px; height: 20px; border: solid 1px #d1d1d1; border-radius: 3px;" 
+                  :style="{ 'background-color': category[classLabel] }"
+                  v-if="classLabel.includes('color')"
+              /></label>
+              
+              <input v-model="category[classLabel]" type="text" class="border border-gray-300 rounded-md px-3 py-2 w-full" />
             </div>
           </div>
+        </Column>
+        <Column>
+          <hr style="margin: 40px 0 60px 0"/>
         </Column>
       </Row>
     </ContainerWrapper>

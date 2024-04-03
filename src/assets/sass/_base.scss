@@ -4,8 +4,17 @@ img {
     object-fit: cover;
     aspect-ratio: 1 / 1; //To fix Cumulative Layout Shift 
 }
+html button {
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-sm);
+}
 
 .tbs-btn-primary {
-    background: var(--bg-primary-color);
+    background: var(--btn-primary-color);
     color: var(--font-primary-color);
+}
+
+.tbs-btn-secondary {
+    background: var(--btn-secondary-color);
+    color: var(--font-secondary-color);
 }
