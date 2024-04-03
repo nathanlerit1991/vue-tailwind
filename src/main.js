@@ -11,14 +11,16 @@ import router from './router'
 
 // Generate CSS based on custom configuration
 const generateStyles = (config) => {
-  let styles = '';
-  Object.entries(config).forEach(([className, properties]) => {
-    styles += `.${className} {`;
-    Object.entries(properties).forEach(([property, value]) => {
-      styles += `${property}: ${value};`;
+  let styles = ':root {';
+  Object.entries(config).forEach(([category, properties]) => {
+    Object.entries(properties).forEach(([className, value]) => {
+      // Check if the value is an object to avoid applying as CSS variable
+      if (typeof value !== 'object') {
+        styles += `--${className}: ${value};`;
+      }
     });
-    styles += `}`;
   });
+  styles += '}';
   return styles;
 };
 

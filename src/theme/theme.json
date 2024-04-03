@@ -1,44 +1,16 @@
 {
-  "tbs-btn-primary": {
-    "background-color": "#fff",
-    "color": "#868686",
-    "font-size": "12px",
-    "font-weight": "400",
-    "padding-left": "16px",
-    "padding-top": "8px",
-    "padding-right": "16px",
-    "padding-bottom": "8px",
-    "border-radius": "8px",
-    "border-color": "#cbcbcb",
-    "border-width": "1px",
-    "border-style": "solid"
+  "background": {
+    "bg-primary-color" : "#fcfcff",
+    "bg-secondary-color" : "#fff"
   },
-  "tbs-btn-secondary": {
-    "background-color": "#38aeeb",
-    "color": "#fff",
-    "font-size": "12px",
-    "font-weight": "400",
-    "padding-left": "16px",
-    "padding-top": "8px",
-    "padding-right": "16px",
-    "padding-bottom": "8px",
-    "border-radius": "8px",
-    "border-color": "#3db2d5",
-    "border-width": "1px",
-    "border-style": "solid"
-  },
-  "tbs-accordion-header-primary": {
-    "background-color": "red",
-    "color": "#fff",
-    "font-size": "12px",
-    "font-weight": "400",
-    "padding-left": "16px",
-    "padding-top": "8px",
-    "padding-right": "16px",
-    "padding-bottom": "8px",
-    "border-radius": "8px",
-    "border-color": "#3db2d5",
-    "border-width": "1px",
-    "border-style": "solid"
+  "font": {
+    "font-primary-color" : "#fff",
+    "font-secondary-color" : "#000",
+    "font-tertiary-color" : "#e1e1e1",
+    "font-xs" : "11px",
+    "font-sm" : "13px",
+    "font-md" : "18px",
+    "font-lg" : "25px",
+    "font-xl" : "32px"
   }
 }
