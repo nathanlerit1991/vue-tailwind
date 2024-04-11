@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import customConfig from '@/theme/theme.json';
+import tinycolor from "tinycolor2";
 
 import SectionWrapper from '@/components/SectionWrapper.vue'
 import ContainerWrapper from '@/components/ContainerWrapper.vue'
@@ -17,6 +18,10 @@ const saveConfig = () => {
   // Update the configuration in the backend or local storage
   localStorage.setItem('themeCSS', JSON.stringify(customConfig));
 }
+
+
+
+
 </script>
 
 
@@ -33,12 +38,12 @@ const saveConfig = () => {
             <div>
               <label class="flex items-center mb-1">
                 {{ classLabel }}
-                <div
-                  class="mx-2"
-                  style="width: 20px; height: 20px; border: solid 1px #d1d1d1; border-radius: 3px;" 
-                  :style="{ 'background-color': category[classLabel] }"
+                <color-picker
                   v-if="classLabel.includes('color')"
-              /></label>
+                  v-model:pureColor="category[classLabel]" 
+                  v-model:gradientColor="category[classLabel]"
+                />
+              </label>
               
               <input v-model="category[classLabel]" type="text" class="border border-gray-300 rounded-md px-3 py-2 w-full" />
             </div>
@@ -64,6 +69,13 @@ const saveConfig = () => {
   </SectionWrapper>
 </template>
 
-
-
-
+<style>
+html #app .vc-color-wrap {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #858585; 
+  border-radius: 3px;
+  box-shadow: none;
+  margin: 0 10px;
+}
+</style>

@@ -5,7 +5,6 @@
     import Column from '@/components/Column.vue'
 
     import Img from '@/components/UIElements/Img.vue'
-    import Calendar from '@/components/UIElements/Calendar.vue'
     import Accordion from '@/components/UIElements/Accordion.vue'
 </script>
 <style lang="scss">
