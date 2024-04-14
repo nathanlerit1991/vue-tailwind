@@ -135,7 +135,7 @@ onMounted(() => {
     </SectionWrapper>
 
     <!-- BACKGROUND ANIMATION -->
-    <ul class="circles">
+    <ul class="floating-squares">
         <li v-for="n in 10" />
     </ul>
 </template>
