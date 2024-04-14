@@ -13,7 +13,7 @@
 <template>
     <div 
         :id="props_data.id_name ? props_data.id_name : null"
-        :class="`container max-w-screen-xl px-default mx-auto ${props_data.additional_class}`">
+        :class="`container px-default mx-auto ${props_data.additional_class}`">
         <slot></slot>
     </div>
 </template>

@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { getCookie } from '@/helpers/getCookie'
-import LoginPage from '../views/LoginPage.vue'
+import LoginPage from '../views/Login/LoginPage.vue'
 import HomePage from '../views/HomePage.vue'
+import ReadMe from '../views/ReadMe.vue'
 import Theme from '../views/Theme.vue'
-import ThemeV2 from '../views/ThemeV2.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +12,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component:LoginPage
+    },
+    {
+      path: '/readme',
+      name: 'readme',
+      component: ReadMe
     },
     {
       path: '/',
@@ -23,19 +28,14 @@ const router = createRouter({
       name: 'theme',
       component: Theme
     },
-    {
-      path: '/themev2',
-      name: 'themev2',
-      component: ThemeV2
-    },
-    {
-      path: '/example',
-      name: 'example',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Example.vue')
-    }
+    // {
+    //   path: '/example',
+    //   name: 'example',
+    //   // route level code-splitting
+    //   // this generates a separate chunk (About.[hash].js) for this route
+    //   // which is lazy-loaded when the route is visited.
+    //   component: () => import('../views/Example.vue')
+    // }
   ]
 })
 
@@ -44,7 +44,7 @@ router.beforeEach((to, from, next) => {
   const isAuthenticated = authToken ? true : false;
 
   // These are the pages accessible without authentication
-  if (!isAuthenticated && to.path !== '/login' && to.path !== '/registration') {
+  if (!isAuthenticated && to.path !== '/login' && to.path !== '/readme') {
     next('/login');
   } else {
     next();

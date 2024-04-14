@@ -3,9 +3,10 @@
     import { useRouter } from 'vue-router';
 
     import SectionWrapper from '@/components/SectionWrapper.vue'
-    import ContainerWrapper from '@/components/ContainerWrapper.vue'
+    import Container from '@/components/Container.vue'
     import Row from '@/components/Row.vue'
     import Column from '@/components/Column.vue'
+    import FormComponent from '@/components/UIElements/FormComponent.vue'
 
 
     //VUE PRIME
@@ -23,15 +24,15 @@
         expires = "; expires=" + date.toUTCString();
         document.cookie = "authToken" + "=" + ("authValue") + expires + "; path=/";
 
-        router.push('/theme');
+        router.push('/');
     }
 </script>
 <template>
     <SectionWrapper id="login-wrapper" additional_class="h-full">
-        <ContainerWrapper additional_class="h-full">
+        <Container additional_class="h-full">
             <Row additional_class="items-center h-full">
                 <Column additional_class="max-w-md mx-auto">
-                    <form class="my-5 p-5 rounded-lg">
+                    <FormComponent>
                         <div v-if="!isRegister" class="my-gap-md">
                             <h2>Login</h2>
                             <div>
@@ -77,10 +78,10 @@
                                 <Button class="tbs-btn-primary" label="Cancel" @click="isRegister = false" />
                             </div>
                         </div>
-                    </form>
+                    </FormComponent>
                 </Column>
             </Row>
-        </ContainerWrapper>
+        </Container>
     </SectionWrapper>
 
     <!-- BACKGROUND ANIMATION -->

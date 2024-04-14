@@ -4,7 +4,7 @@ import customConfig from '@/theme/theme.json';
 import tinycolor from "tinycolor2";
 
 import SectionWrapper from '@/components/SectionWrapper.vue'
-import ContainerWrapper from '@/components/ContainerWrapper.vue'
+import Container from '@/components/Container.vue'
 import Row from '@/components/Row.vue'
 import Column from '@/components/Column.vue'
 
@@ -23,12 +23,9 @@ const saveConfig = () => {
 
 
 </script>
-
-
-
 <template>
   <SectionWrapper>
-    <ContainerWrapper>
+    <Container>
       <Row v-for="(category, categoryName) in temporaryConfigStorage" :key="categoryName">
         <Column>
           <h3 class="uppercase text-lg font-bold mb-3">{{ categoryName }}</h3>
@@ -53,11 +50,11 @@ const saveConfig = () => {
           <hr style="margin: 40px 0 60px 0"/>
         </Column>
       </Row>
-    </ContainerWrapper>
+    </Container>
   </SectionWrapper>
 
   <SectionWrapper>
-    <ContainerWrapper>
+    <Container>
       <Row>
         <Column>
           <button @click="saveConfig" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-md">
@@ -65,7 +62,7 @@ const saveConfig = () => {
           </button>
         </Column>
       </Row>
-    </ContainerWrapper>
+    </Container>
   </SectionWrapper>
 </template>
 
