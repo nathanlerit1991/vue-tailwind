@@ -1,0 +1,41 @@
+/* 
+    Add this class to parent wrapper
+    It will create spacing to its child elements
+*/
+.my-gap-sm {
+    > * {
+        margin-bottom: var(--tbs-space-sm);
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.my-gap-md {
+    > * {
+        margin-bottom: var(--tbs-space-md);
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.mx-gap-sm {
+    > * {
+        margin-right: var(--tbs-space-sm);
+    }
+    > *:last-child {
+        margin-right: 0;
+    }
+}
+
+.mx-gap-md {
+    > * {
+        margin-right: var(--tbs-space-md);
+    }
+    > *:last-child {
+        margin-right: 0;
+    }
+}

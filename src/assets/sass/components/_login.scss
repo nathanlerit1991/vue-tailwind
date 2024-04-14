@@ -1,0 +1,18 @@
+#login-wrapper {
+    @at-root {
+        html, body, #app {
+            height: 100%;
+        }
+    }
+
+    form {
+        background: var(--tbs-bg-primary-color);
+        box-shadow: 1px 1px 4px #e0e0e0;
+        transition: all ease 0.5s;
+    }
+}
+
+
+
+
+

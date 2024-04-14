@@ -6,6 +6,8 @@
 
     import Img from '@/components/UIElements/Img.vue'
     import Accordion from '@/components/UIElements/Accordion.vue'
+
+    import InputText from 'primevue/inputtext';
 </script>
 <style lang="scss">
 h2 {
@@ -54,6 +56,7 @@ h2 {
 }
 </style>
 <template>
+    <InputText type="text" />
     <SectionWrapper id="hero">
         <ContainerWrapper>
             <Row>

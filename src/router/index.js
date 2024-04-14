@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { getCookie } from '@/helpers/getCookie'
+import LoginPage from '../views/LoginPage.vue'
 import HomePage from '../views/HomePage.vue'
 import Theme from '../views/Theme.vue'
 import ThemeV2 from '../views/ThemeV2.vue'
@@ -7,6 +8,11 @@ import ThemeV2 from '../views/ThemeV2.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/login',
+      name: 'login',
+      component:LoginPage
+    },
     {
       path: '/',
       name: 'home',
@@ -33,16 +39,16 @@ const router = createRouter({
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   const authToken = getCookie('authToken');
-//   const isAuthenticated = authToken ? true : false;
+router.beforeEach((to, from, next) => {
+  const authToken = getCookie('authToken');
+  const isAuthenticated = authToken ? true : false;
 
-//   // These are the pages accessible without authentication
-//   if (!isAuthenticated && to.path !== '/login' && to.path !== '/registration') {
-//     next('/login');
-//   } else {
-//     next();
-//   }
-// });
+  // These are the pages accessible without authentication
+  if (!isAuthenticated && to.path !== '/login' && to.path !== '/registration') {
+    next('/login');
+  } else {
+    next();
+  }
+});
 
 export default router

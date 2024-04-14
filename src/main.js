@@ -7,6 +7,7 @@ import VueLazyLoad from 'vue3-lazyload'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import PrimeVue from 'primevue/config';
 // import { lazyLoadingPlugin } from '@/plugins/lazyLoading.js'
 
 import App from './App.vue'
@@ -73,4 +74,5 @@ app.use(createPinia())
 app.use(router)
 app.use(Vue3ColorPicker)
 app.use(VueLazyLoad)
+app.use(PrimeVue)
 app.mount('#app')

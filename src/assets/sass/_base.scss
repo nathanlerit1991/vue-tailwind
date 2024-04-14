@@ -1,20 +1,44 @@
+//FONTS
+h1 {
+    font-size: var(--tbs-font-xl);
+}
+h2 {
+    font-size: var(--tbs-font-lg);
+}
+
+
+
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     aspect-ratio: 1 / 1; //To fix Cumulative Layout Shift 
 }
-html button {
-    padding: var(--space-sm) var(--space-md);
-    border-radius: var(--border-radius-sm);
+
+
+//FORMS
+label {
+    font-size: var(--tbs-font-sm);
+}
+input {
+    margin: var(--tbs-space-sm) 0;
+}
+
+
+
+//BUTTONS
+button {
+    padding: var(--tbs-space-sm) var(--tbs-space-md);
+    border-radius: var(--tbs-border-radius-sm);
 }
 
 .tbs-btn-primary {
-    background: var(--btn-primary-color);
-    color: var(--font-primary-color);
+    background: var(--tbs-btn-primary-color);
+    color: var(--tbs-font-primary-color);
+    border: solid 1px var(--tbs-font-primary-color);
 }
 
 .tbs-btn-secondary {
-    background: var(--btn-secondary-color);
-    color: var(--font-secondary-color);
+    background: var(--tbs-btn-secondary-color);
+    color: var(--tbs-font-secondary-color);
 }
